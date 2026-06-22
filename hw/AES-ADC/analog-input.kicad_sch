@@ -1,0 +1,86 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "72a44bca-9eeb-49b7-b09a-461ca3ebbdae")
+	(paper "A4")
+	(title_block
+		(title "AES-ADC")
+		(date "2026-06-22")
+		(rev "A")
+		(comment 1 "AnalogInput")
+		(comment 4 "Standard")
+	)
+	(lib_symbols)
+	(text "ANALOG INPUT  (2 ch balanced, +4 dBu)
+Components:
+ - J: 2x Neutrik NC3FAH1 female XLR (L,R)
+ - precision 0.1% balanced attenuator: 0 dBFS = +24 dBu (~ -12.5 dB)  [D1/R7]
+ - U: OPA1612 diff receiver + anti-alias + ADC driver (1 dual/ch)
+ - C0G anti-alias caps
+Outputs AINL_P/N, AINR_P/N -> PCM4202 differential inputs.
+Runs on +5V analog + Vcom mid-rail bias."
+		(exclude_from_sim no)
+		(at 12.7 12.7 0)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left top)
+		)
+		(uuid "25d1bc40-2d83-44af-b528-fa7eb7c7882f")
+	)
+	(hierarchical_label "AINL_P"
+		(shape output)
+		(at 38.1 50.8 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e3c3ffbe-32dd-4d8a-8ebb-46d77da4d4c2")
+	)
+	(hierarchical_label "AINL_N"
+		(shape output)
+		(at 38.1 57.15 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a8df2c06-e03a-46db-8d22-d66b370c010e")
+	)
+	(hierarchical_label "AINR_P"
+		(shape output)
+		(at 38.1 63.5 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "cc8926fd-4910-4983-a5bb-c5e1d1557f62")
+	)
+	(hierarchical_label "AINR_N"
+		(shape output)
+		(at 38.1 69.85 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "289fcda2-8389-46e5-a808-4df6d692e414")
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)

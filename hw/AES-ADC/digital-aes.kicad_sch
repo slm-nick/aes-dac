@@ -1,0 +1,159 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "2e5a03bf-6389-4121-a964-a3ab0f086355")
+	(paper "A4")
+	(title_block
+		(title "AES-ADC")
+		(date "2026-06-22")
+		(rev "A")
+		(comment 1 "DigitalAES")
+		(comment 4 "Standard")
+	)
+	(lib_symbols)
+	(text "DIGITAL  +  AES OUTPUT
+Components:
+ - U: PCM4202 ADC (SSOP-28), I2S MASTER, hardware-strapped (M/S,FMT,rate)
+ - U: DIT4192 AES Tx (SSOP-28), I2S SLAVE, single-wire   [D9]
+ - T: AES Tx transformer (PE-65612NL / SC937-02)   [D4]
+ - J: Neutrik NC3MAH male XLR (AES out, 110ohm)
+Internal I2S: ADC -> BCK/LRCK/SDATA -> DIT.  MCLK from Clocking.
+Control: DIT_SCK/MOSI/CS from MCU.  CONV_RST_N gates ADC+DIT.
+AIN*_x from Analog Input sheet."
+		(exclude_from_sim no)
+		(at 12.7 12.7 0)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left top)
+		)
+		(uuid "206ac4ce-5c5a-4a53-8f27-90329bfe5990")
+	)
+	(hierarchical_label "MCLK"
+		(shape input)
+		(at 38.1 50.8 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "f25dd8e9-4035-4ca5-b8fe-428df9ebee05")
+	)
+	(hierarchical_label "AINL_P"
+		(shape input)
+		(at 38.1 57.15 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d19de904-3fd8-47ad-ba8a-eb7884f4e4ad")
+	)
+	(hierarchical_label "AINL_N"
+		(shape input)
+		(at 38.1 63.5 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7ebbda61-dca0-47d0-b0be-b2479f6b3a7e")
+	)
+	(hierarchical_label "AINR_P"
+		(shape input)
+		(at 38.1 69.85 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b299dabd-f5d4-4013-ab0a-ed7431a5a88e")
+	)
+	(hierarchical_label "AINR_N"
+		(shape input)
+		(at 38.1 76.19999999999999 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b3449de0-3959-49ef-b5ab-f9e43b14e758")
+	)
+	(hierarchical_label "DIT_SCK"
+		(shape input)
+		(at 38.1 82.54999999999998 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "0902a0a8-7300-4ffc-9d4d-0fba0a8d6b78")
+	)
+	(hierarchical_label "DIT_MOSI"
+		(shape input)
+		(at 38.1 88.89999999999998 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "2f4b3ba0-b6f2-48cd-92f6-6cfb4cd07def")
+	)
+	(hierarchical_label "DIT_CS"
+		(shape input)
+		(at 38.1 95.24999999999997 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b7563064-ea8b-418d-bce4-185f27fd68e6")
+	)
+	(hierarchical_label "CONV_RST_N"
+		(shape input)
+		(at 38.1 101.59999999999997 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "89ebf48e-e71d-4621-b9ba-daf2c02a81c4")
+	)
+	(hierarchical_label "RST_N"
+		(shape input)
+		(at 38.1 107.94999999999996 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "476d984f-7d12-4df2-9411-b2f3263d0140")
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)

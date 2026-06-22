@@ -1,0 +1,148 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "29bd1ff7-22bc-4df9-8539-cba09c5bba4f")
+	(paper "A4")
+	(title_block
+		(title "AES-ADC")
+		(date "2026-06-22")
+		(rev "A")
+		(comment 1 "MCU")
+		(comment 4 "Standard")
+	)
+	(lib_symbols)
+	(text "MCU  (RP2040 control / supervision)
+Components:
+ - U: RP2040 (QFN-56)  + 12MHz xtal
+ - U: W25Q128 QSPI flash (SOIC-8)
+ - J: USB-C (flash UF2 + serial)
+ - SW: BOOTSEL, RUN buttons ; rate-select DIP
+ - LEDs: EXT-LOCK / INT-MASTER / FAULT
+I2C0 -> CS2000 (SDA/SCL).  SPI0 -> DIT4192 (SCK/MOSI/CS).
+Reads WCLK_MON (PIO freq count) + CS2K_UNLK.  Drives CONV_RST_N.
+USB_VBUS -> Power sheet (OR diode).  See aes-adc-firmware.md"
+		(exclude_from_sim no)
+		(at 12.7 12.7 0)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left top)
+		)
+		(uuid "4b2aef7a-8c2e-4de0-9fa8-708dbc455d52")
+	)
+	(hierarchical_label "SDA"
+		(shape bidirectional)
+		(at 38.1 50.8 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c428946a-cbbb-4b3d-ac54-21107ba8504f")
+	)
+	(hierarchical_label "SCL"
+		(shape bidirectional)
+		(at 38.1 57.15 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "0bc91561-f14a-4f63-bba5-5997689e8f9e")
+	)
+	(hierarchical_label "DIT_SCK"
+		(shape output)
+		(at 38.1 63.5 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "567d46f2-f93e-412e-9eec-d2da13f0f1e3")
+	)
+	(hierarchical_label "DIT_MOSI"
+		(shape output)
+		(at 38.1 69.85 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "74606e85-e999-4488-a739-6ae7dca88211")
+	)
+	(hierarchical_label "DIT_CS"
+		(shape output)
+		(at 38.1 76.19999999999999 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "fb793544-913b-40d5-85fb-b9653492448f")
+	)
+	(hierarchical_label "CONV_RST_N"
+		(shape output)
+		(at 38.1 82.54999999999998 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "3825a183-1729-42f0-a2c8-a40b7f9ba7a7")
+	)
+	(hierarchical_label "WCLK_MON"
+		(shape input)
+		(at 38.1 88.89999999999998 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b6392206-48ab-4a4e-ba17-88097d4b449b")
+	)
+	(hierarchical_label "CS2K_UNLK"
+		(shape input)
+		(at 38.1 95.24999999999997 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "0722cfde-5329-43d3-b6f7-29f6114f71ab")
+	)
+	(hierarchical_label "RST_N"
+		(shape input)
+		(at 38.1 101.59999999999997 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "14709f84-e51f-4608-abcd-63302a3c7b24")
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)

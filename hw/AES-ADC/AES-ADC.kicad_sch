@@ -1,0 +1,498 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "d74c5b0c-bf56-467c-b3e0-ac6c714f3e4f")
+	(paper "A4")
+	(title_block
+		(title "AES-ADC")
+		(date "2026-06-22")
+		(rev "A")
+		(comment 1 "Root - system hierarchy")
+		(comment 4 "Standard")
+	)
+	(lib_symbols)
+	(text "AES-ADC  -  2ch balanced analog -> 110 ohm AES,  word-clock slave / internal master.
+See _bmad-output/planning-artifacts/aes-adc-architecture.md  and  README-capture-plan.md.
+Each sheet below lists its components + the inter-sheet nets (hierarchical labels already placed)."
+		(exclude_from_sim no)
+		(at 12.7 10 0)
+		(effects
+			(font
+				(size 1.2 1.2)
+			)
+			(justify left top)
+		)
+		(uuid "565f6502-74fd-4dcc-b4e0-787bc73290f5")
+	)
+	(sheet
+		(at 20 25)
+		(size 80 40)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "3f0985c2-5f16-4523-a903-efad06ab6ff9")
+		(property "Sheetname" "Power"
+			(at 20 24.2888 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "power.kicad_sch"
+			(at 20 65.5588 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "RST_N" output
+			(at 100 32.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "540affc3-4312-44a7-8e2f-4e3a754d5764")
+		)
+	)
+	(sheet
+		(at 115 25)
+		(size 80 40)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "1fd69bc2-3974-43f6-9afb-3540211cecdb")
+		(property "Sheetname" "Clocking"
+			(at 115 24.2888 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "clocking.kicad_sch"
+			(at 115 65.5588 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "MCLK" output
+			(at 195 32.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "ddb59355-920e-4606-acf4-5369cbf504f6")
+		)
+		(pin "WCLK_MON" output
+			(at 195 37.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "be0169c8-d80f-4d40-b139-32bc277f2b27")
+		)
+		(pin "CS2K_UNLK" output
+			(at 195 42.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "6e0c676f-bbf9-42a0-a068-a769b5823cc7")
+		)
+		(pin "SDA" bidirectional
+			(at 195 47.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "419784b4-3995-4c1d-861a-814936de9551")
+		)
+		(pin "SCL" bidirectional
+			(at 195 52.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "a040d07c-fa29-4e5f-9b00-16f08b87ffca")
+		)
+	)
+	(sheet
+		(at 210 25)
+		(size 80 58.42)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "a068b5a9-8776-406d-9039-032a1690f559")
+		(property "Sheetname" "MCU"
+			(at 210 24.2888 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "mcu.kicad_sch"
+			(at 210 83.9788 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "SDA" bidirectional
+			(at 290 32.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "97f349ef-7ea1-4a14-b5fd-70b0137c87d4")
+		)
+		(pin "SCL" bidirectional
+			(at 290 37.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "41522f04-cc34-4e69-b111-e1794d3f57a9")
+		)
+		(pin "DIT_SCK" output
+			(at 290 42.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "ea54aea9-cae9-4751-ae33-7c5a3e01d20f")
+		)
+		(pin "DIT_MOSI" output
+			(at 290 47.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "18093def-7558-4dd0-9d93-0f87696c669f")
+		)
+		(pin "DIT_CS" output
+			(at 290 52.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "fedf44b9-5051-4ade-88ed-70482c3b1013")
+		)
+		(pin "CONV_RST_N" output
+			(at 290 58.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "c7785976-763c-4b5d-9bf0-519e9019b5f4")
+		)
+		(pin "WCLK_MON" input
+			(at 290 63.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "03024b4c-f531-4ef4-9366-5ccdc1ee5cc5")
+		)
+		(pin "CS2K_UNLK" input
+			(at 290 68.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "69c6d8d0-bd9b-4d8e-9684-0be9ed544a4e")
+		)
+		(pin "RST_N" input
+			(at 290 73.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "158ca8fa-4319-4770-8156-f659c5ff0174")
+		)
+	)
+	(sheet
+		(at 20 130)
+		(size 80 40)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "62ca2174-9b37-42f5-aa8f-5711ae5d02e1")
+		(property "Sheetname" "AnalogInput"
+			(at 20 129.2888 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "analog-input.kicad_sch"
+			(at 20 170.5588 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "AINL_P" output
+			(at 100 137.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "f1235849-0645-44cd-92f0-01a630cb949d")
+		)
+		(pin "AINL_N" output
+			(at 100 142.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "33d6cef5-f292-4634-9da7-8c6e649b6df6")
+		)
+		(pin "AINR_P" output
+			(at 100 147.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "7d936a4e-8395-4b8c-ba11-86a6db6e857f")
+		)
+		(pin "AINR_N" output
+			(at 100 152.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "e2070c31-abb6-46e1-9e10-8d639495327f")
+		)
+	)
+	(sheet
+		(at 115 130)
+		(size 80 63.5)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "f3400016-a7fe-4087-b034-da05c25626c0")
+		(property "Sheetname" "DigitalAES"
+			(at 115 129.2888 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "digital-aes.kicad_sch"
+			(at 115 194.0588 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "MCLK" input
+			(at 195 137.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "ba6e25f5-beb7-4d56-964d-a4b063b18924")
+		)
+		(pin "AINL_P" input
+			(at 195 142.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "93b85128-a4dd-46fa-8027-c6aea9e1b1e9")
+		)
+		(pin "AINL_N" input
+			(at 195 147.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "724e7075-3825-4107-8270-9145c5d5383a")
+		)
+		(pin "AINR_P" input
+			(at 195 152.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "63aec17b-aee0-4fd2-90e1-2fe53d96b7cb")
+		)
+		(pin "AINR_N" input
+			(at 195 157.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "ab95ac00-0d37-496f-b6eb-2e0367b87da8")
+		)
+		(pin "DIT_SCK" input
+			(at 195 163.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "a58cbc96-74b1-47fa-93a7-fa346ff6862e")
+		)
+		(pin "DIT_MOSI" input
+			(at 195 168.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "03d42eed-bbef-4578-b240-6c79a55e31d1")
+		)
+		(pin "DIT_CS" input
+			(at 195 173.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "a9fc55fb-6fef-4db9-a154-32969041ae35")
+		)
+		(pin "CONV_RST_N" input
+			(at 195 178.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "6668d868-c394-4be4-b4a3-7242e9d1c847")
+		)
+		(pin "RST_N" input
+			(at 195 183.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "604800a2-36eb-448b-bcea-a08545aa3f41")
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)

@@ -1,0 +1,100 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "3bad5c67-7143-418f-b038-e93b45be7407")
+	(paper "A4")
+	(title_block
+		(title "AES-ADC")
+		(date "2026-06-22")
+		(rev "A")
+		(comment 1 "Clocking")
+		(comment 4 "Standard")
+	)
+	(lib_symbols)
+	(text "CLOCKING  +  WORD-CLOCK INPUT
+Components:
+ - J: 75ohm PCB BNC -> 75R term -> AC-couple+bias
+ - U: TLV3501 comparator -> WCLK_CMOS (3V3)   [D7]
+ - U: CS2000CP-CZZ clock gen (I2C: SDA/SCL)
+      CLK_IN <- WCLK_CMOS ; REF_CLK <- Y 24.576MHz xtal
+      CLK_OUT -> MCLK (256*Fs)
+ - Y: 24.576 MHz crystal (REF_CLK timebase)
+Outputs: MCLK -> Digital/AES ; WCLK_MON + CS2K_UNLK -> MCU
+Powered from +3V3_CLK (clean)."
+		(exclude_from_sim no)
+		(at 12.7 12.7 0)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left top)
+		)
+		(uuid "7b4e1dee-be08-427c-b8a9-584dc4a27372")
+	)
+	(hierarchical_label "MCLK"
+		(shape output)
+		(at 38.1 50.8 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "50ce1050-9c1c-482e-83e0-eaeb6dcf1921")
+	)
+	(hierarchical_label "WCLK_MON"
+		(shape output)
+		(at 38.1 57.15 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7b611f7b-cf41-42ba-a141-908401aa8996")
+	)
+	(hierarchical_label "CS2K_UNLK"
+		(shape output)
+		(at 38.1 63.5 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d216c38e-831b-438a-aa67-daa0d2b27f98")
+	)
+	(hierarchical_label "SDA"
+		(shape bidirectional)
+		(at 38.1 69.85 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "73337cf5-0c46-44a1-8b41-4efed6c49a66")
+	)
+	(hierarchical_label "SCL"
+		(shape bidirectional)
+		(at 38.1 76.19999999999999 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "36a9eda9-0022-483c-a52e-242d3671464d")
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)

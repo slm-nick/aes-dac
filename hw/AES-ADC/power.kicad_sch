@@ -1,0 +1,53 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "78a3b3e4-8d99-444e-b500-88657f2baf79")
+	(paper "A4")
+	(title_block
+		(title "AES-ADC")
+		(date "2026-06-22")
+		(rev "A")
+		(comment 1 "Power")
+		(comment 4 "Standard")
+	)
+	(lib_symbols)
+	(text "POWER  (reuse AES-DAC power tree)
+Components:
+ - J: barrel jack DCJ200-10-A  (9V in, center-negative) -> VIN
+ - U: TPS7A4901  -> +5V analog
+ - U: TPS7A4901  -> +3V3 digital
+ - U: TPS7A4901 (opt) -> +3V3_CLK clean rail (CS2000+xtal)
+ - U: APX803S05-29SA-7 supervisor -> RST_N
+ - D: VBUS OR diode (USB_VBUS vs +5V)   [D8]
+ - decoupling, ferrite beads per rail
+Rails (+5V,+3V3,+3V3_CLK,GND) distributed via global power symbols.
+Export RST_N as hierarchical label."
+		(exclude_from_sim no)
+		(at 12.7 12.7 0)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left top)
+		)
+		(uuid "394c1ec8-89a8-4f77-91bc-2111c879589e")
+	)
+	(hierarchical_label "RST_N"
+		(shape output)
+		(at 38.1 50.8 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "79043a26-f3ca-4783-bcc0-f3a27a5e2c14")
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)
